@@ -481,11 +481,21 @@ Gaussian perturbation applied to a small set of actions is more efficient than n
 <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
         <h2 class="title">BibTeX</h2>
-        <pre><code>@article{kwok25robomonkey,
-    title={RoboMonkey: Scaling Test-Time Sampling and Verification for Vision-Language-Action Models},
-    author={Jacky Kwok and Christopher Agia and Rohan Sinha and Matt Foutter and Shulu Li and Ion Stoica and Azalia Mirhoseini and Marco Pavone},
-    journal={arXiv preprint arXiv:2506.17811},
-    year={2025},
+        <pre><code>@InProceedings{pmlr-v305-kwok25a,
+  title = 	 {RoboMonkey: Scaling Test-Time Sampling and Verification for Vision-Language-Action Models},
+  author =       {Kwok, Jacky and Agia, Christopher and Sinha, Rohan and Foutter, Matt and Li, Shulu and Stoica, Ion and Mirhoseini, Azalia and Pavone, Marco},
+  booktitle = 	 {Proceedings of The 9th Conference on Robot Learning},
+  pages = 	 {3200--3217},
+  year = 	 {2025},
+  editor = 	 {Lim, Joseph and Song, Shuran and Park, Hae-Won},
+  volume = 	 {305},
+  series = 	 {Proceedings of Machine Learning Research},
+  month = 	 {27--30 Sep},
+  publisher =    {PMLR},
+  pdf = 	 {https://raw.githubusercontent.com/mlresearch/v305/main/assets/kwok25a/kwok25a.pdf},
+  url = 	 {https://proceedings.mlr.press/v305/kwok25a.html},
+  abstract = 	 {Vision-Language-Action (VLA) models, pre-trained on large-scale imitation learning datasets, have demonstrated remarkable capabilities in visuomotor control. However, these models exhibit diverse failure modes in unstructured real-world environments, limiting the widespread adoption of VLAs in robotics. Efforts to enhance the robustness and generalization of VLAs have gradually shifted from the pre-training to the post-training phase. Yet, the potential of scaling test-time compute remains underexplored. In this paper, we investigate test-time scaling for robotics through the lens of sampling and verification. We first demonstrate that the relationship between action error and the number of generated samples follows an exponentiated power law across a range of VLAs, indicating the existence of inference-time scaling laws. Building on this insight, we propose a synthetic data generation pipeline for training a Vision-Language Model (VLM)-based action verifier, and show that scaling the synthetic dataset consistently improves verification and downstream accuracy. We then introduce RoboMonkey, a test-time scaling framework for VLAs. At deployment, RoboMonkey samples a small set of actions from a VLA, applies Gaussian perturbations and majority voting to construct an action proposal distribution, and then uses the VLM-based verifier to select the optimal action. Through extensive evaluations across simulated and real-world environments, we show that pairing existing VLAs with RoboMonkey yields significant performance gains, achieving a 25% absolute improvement on out-of-distribution tasks and 8% higher average success rate on in-distribution tasks. Additionally, when adapting to new robot setups, we show that fine-tuning both VLAs and action verifiers yields a 7% performance increase compared to fine-tuning VLAs alone.}
+}
 }</code></pre>
     </div>
 </section>
